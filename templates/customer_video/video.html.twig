@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="container py-5">
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <img src="{{ video.image }}" alt="video" class="imageVideoDetail">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>{{ video.name | upper }}</h3>
+                </div>
+                <div class="card-body">
+                   <a href="{{video.codeYoutube}}">Lien de la video</a>
+                </div>
+                <div class="card-footer">
+                    <a href="" class="btn btn-primary w-100">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

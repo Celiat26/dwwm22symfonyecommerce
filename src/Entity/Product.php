@@ -15,20 +15,20 @@ class Product
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank(message: 'Le champs nom est requis')]
+    #[Assert\NotBlank(message: 'Le champs nom est requis.')]
     private $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank(message: 'Le champs image est requis')]
+    #[Assert\NotBlank(message: 'Le champs image est requis.')]
     private $image;
 
     #[ORM\Column(type: 'integer')]
-    #[Assert\NotBlank(message: 'Le champs prix est requis')]
+    #[Assert\NotBlank(message: 'Le champs prix est requis.')]
     private $price;
 
     #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Assert\NotBlank(message: 'Le champs catégorie est requis')]
+    #[Assert\NotBlank(message: 'Le champs catégorie est requis.')]
     private $category;
 
     public function getId(): ?int
